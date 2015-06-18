@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Personne:</strong>
+  <%= @projet.personne %>
+</p>
+
+<p>
+  <strong>Organisme:</strong>
+  <%= @projet.organisme %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @projet.nom %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @projet.telephone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @projet.email %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @projet.description %>
+</p>
+
+<%= link_to 'Modifier', edit_projet_path(@projet) %> |

@@ -74,3 +74,7 @@ h1 {
 	border-radius: 5px;
 	color: white;
 }
+a {
+     text-decoration: none;
+     font-family: 'raleway'
+}

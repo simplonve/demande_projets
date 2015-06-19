@@ -22,7 +22,7 @@ h1 {
 	font-family: 'raleway';
 	margin-left:10%;
 	margin-right: 10%;
-	background-color: #EEECEC; 
+	background-color: #EEECEC;
 	padding-top: 1%;
 	padding-bottom: 1%;
 	padding-left: 1%;
@@ -59,7 +59,7 @@ h1 {
 	margin-bottom: 1%;
 }
 #projet_email {
-	
+
 	width: 40%;
 	height: 2em;
 }
@@ -73,7 +73,7 @@ h1 {
 .actions {
 }
 .bouton {
-	margin-left: 85%; 
+	margin-left: 85%;
 	width: 15%;
 	height: 2em;
 	background-color: #185E8E;
@@ -92,4 +92,8 @@ h1 {
 	height: 250px;
 	padding: 1%;
 	background-color: white;
+}	
+a {
+     text-decoration: none;
+     font-family: 'raleway';
 }

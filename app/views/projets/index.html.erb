@@ -1,8 +1,5 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Liste des demandes de projet</h1>
-
-
 <table>
   <thead>
     <tr>
@@ -26,13 +23,10 @@
         <td><%= projet.email %></td>
         <td><%= projet.description %></td>
         <td><%= link_to 'Voir', projet %></td>
-        <td><%= link_to 'Editer', edit_projet_path(projet) %></td>
         <td><%= link_to 'Supprimer', projet, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
-<%= link_to 'Nouveau Projet', new_projet_path %>

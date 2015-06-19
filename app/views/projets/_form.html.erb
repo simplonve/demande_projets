@@ -1,4 +1,4 @@
-<%= form_for :projet, url: projets_path do |f| %>
+<%= form_for (@projet) do |f| %>
   <% if @projet.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@projet.errors.count, "error") %> prohibited this projet from being saved:</h2>
@@ -36,6 +36,6 @@
     <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+      <input type="submit" value="Envoyer" />
   </div>
 <% end %>

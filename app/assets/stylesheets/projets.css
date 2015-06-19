@@ -1,3 +1,10 @@
 h1 {
 	color: red;
 }
+#projet_email {
+	width: 50%;
+}
+#projet_description {
+	width: 60%;
+	height: 150px;
+}

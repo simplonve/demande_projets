@@ -1,13 +1,16 @@
 
 @font-face{
     font-family: 'raleway';
-    src: url('raleway/Raleway-Light.eot');
-    src: url('raleway/Raleway-Light.eot?#iefix') format('embedded-opentype'),
-         url('raleway/Raleway-Light.woff') format('woff'),
-         url('raleway/Raleway-Light.ttf') format('truetype'),
-         url('raleway/Raleway-Light.svg#Raleway-Light') format('svg');
+    src: url('raleway/Raleway.eot');
+    src: url('raleway/Raleway.eot?#iefix') format('embedded-opentype'),
+         url('raleway/Raleway.woff') format('woff'),
+         url('raleway/Raleway.ttf') format('truetype'),
+         url('raleway/Raleway.svg#Raleway') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+html,body {
+	font-family: 'raleway';
 }
 
 h1 {
@@ -24,6 +27,9 @@ h1 {
 	padding-bottom: 1%;
 	padding-left: 1%;
 	padding-right: 2%;
+}
+.titre_champ {
+	font-family: 'raleway';
 }
 .personne {
 	margin-bottom: 1%;
@@ -73,4 +79,17 @@ h1 {
 	background-color: #185E8E;
 	border-radius: 5px;
 	color: white;
+}
+.boite {
+	width: 40%;
+	height: 20px;
+	padding: 1%;
+	border-radius: 5px;
+	background-color: white;
+}
+.boite_description {
+	width: 80%;
+	height: 250px;
+	padding: 1%;
+	background-color: white;
 }

@@ -1,33 +1,50 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Personne:</strong>
-  <%= @projet.personne %>
-</p>
-
-<p>
-  <strong>Organisme:</strong>
-  <%= @projet.organisme %>
-</p>
-
-<p>
-  <strong>Nom:</strong>
-  <%= @projet.nom %>
-</p>
-
-<p>
-  <strong>Telephone:</strong>
-  <%= @projet.telephone %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @projet.email %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @projet.description %>
-</p>
-
-<%= link_to 'Modifier', edit_projet_path(@projet) %> |
+  <div class="container">
+  <div ="notice">
+  <p id="notice"><%= notice %></p>
+  </div >
+    <div class="personne">
+     <p>
+      Personne
+     </p> 
+     <p class="boite"><%= @projet.personne %>
+     </p>
+    </div>
+    <div class="organisme">
+     <p>
+      Organisme
+     </p>
+     <p class="boite"><%= @projet.organisme %>
+     </p>
+    </div>
+  <div class="nom">
+     <p>
+      Nom
+     </p>
+     <p class="boite"><%= @projet.nom %>
+     </p>
+  </div>
+  <div class="telephone">
+    <p>
+    Telephone  
+    </p>
+    <p class="boite"><%= @projet.telephone %>
+    </p>
+  </div>
+  <div class="email">
+    <p>
+    Email
+    </p>
+    <p class="boite"><%= @projet.email %>
+  </p>
+  </div>
+  <div class="description">
+   <p>
+    Description
+   </p>
+   <p class="boite_description"><%= @projet.description %>
+   </p>
+  </div>
+  <div class="bouton">
+   <%= link_to 'Modifier', edit_projet_path(@projet) %> |
+  </div>
+  </div>

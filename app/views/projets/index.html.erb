@@ -3,29 +3,32 @@
 <table>
   <thead>
     <tr>
-      <th>Personne</th>
-      <th>Organisme</th>
-      <th>Nom</th>
-      <th>Telephone</th>
-      <th>Email</th>
-      <th>Description</th>
-      <th colspan="6"></th>
-    </tr>
+      <th><p class="titre"><p class="titre"> Voir </p></th>
+      <th><p class="titre"> Supprimer </p></th>
+      <th><p class="titre"> Personne </p></th>
+      <th><p class="titre"> Organisme </p></th>
+      <th><p class="titre"> Nom </p></th>
+      <th><p class="titre"> Telephone </p></th>
+      <th><p class="titre"> Email </p></th>
+   </tr>
   </thead>
 
   <tbody>
     <% @projets.each do |projet| %>
       <tr>
-        <td><%= projet.personne %></td>
-        <td><%= projet.organisme %></td>
-        <td><%= projet.nom %></td>
-        <td><%= projet.telephone %></td>
-        <td><%= projet.email %></td>
-        <td><%= projet.description %></td>
-        <td><%= link_to 'Voir', projet %></td>
-        <td><%= link_to 'Supprimer', projet, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %></td>
+        <td class="bouton2"><%= link_to 'Voir', projet %></td>
+        <td class="bouton2"><%= link_to 'Supprimer', projet, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %></td>
+        <td class="titre" ><%= projet.personne %></td>
+        <td class="titre"><%= projet.organisme %></td>
+        <td class="titre"><%= projet.nom %></td>
+        <td class="titre"><%= projet.telephone %></td>
+        <td class="titre"><%= projet.email %></td>
       </tr>
-    <% end %>
+      <tr>
+        <td><p class="titre">Description</p></td>
+        <td colspan="7"><div class="description_index"><%= projet.description %></div></td>
+      </tr>
+     <% end %>
   </tbody>
 </table>
 <br>

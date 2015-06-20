@@ -95,11 +95,12 @@ h1 {
              word-wrap: break-word;
 }
 .description_index {
-	width: 50%;
+	width: 80%;
 	word-wrap: break-word;
 
 }
 .titre {
+	text-align: center;
 	width: 15%;
 }
 table td {

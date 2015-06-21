@@ -4,8 +4,9 @@
   <p id="notice"><%= notice %></p>
   </div >
     <div class="personne">
+      <p> 
      <p>
-      Personne
+      Type d'organisme : 
      </p> 
      <p class="boite"><%= @projet.personne %>
      </p>
@@ -47,6 +48,7 @@
   </div>
   <div class="bouton">
    <%= link_to 'Modifier', edit_projet_path(@projet) %> |
+   <%= link_to 'Quitter', new_projet_path(@projet) %> 
   </div>
   </div>
 

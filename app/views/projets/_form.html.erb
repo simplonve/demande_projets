@@ -12,7 +12,7 @@
   <% end %>
 <div class="container">
   <div class="personne">
-    <%= f.label :personne, :class => 'titre_champ' %><br>
+    <label>Type d'organisme</label>
     <%= f.select :personne , ["Association", "Collectivité", "Entreprise", "Particulier", "Artisan"] , { include_blank: false } %>
   </div>
   <div class="organisme">

@@ -11,7 +11,8 @@
     </div>
   <% end %>
 <div class="container">
-  <div class="personne">
+    <%= image_tag("prise.jpg", :alt => "prise contact", :class => "img_prise") %>
+    <div class="personne">
     <label>Type d'organisme</label>
     <%= f.select :personne , ["Association", "Collectivité", "Entreprise", "Particulier", "Artisan"] , { include_blank: false } %>
   </div>

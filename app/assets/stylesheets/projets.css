@@ -27,6 +27,9 @@ h1 {
 	padding-right: 2%;
 }
 
+img.img_prise{
+	float: right;
+}
 .personne {
 	margin-bottom: 1%;
 }

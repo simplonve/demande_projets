@@ -119,6 +119,10 @@ h1 {
 	width: 15%;
 }
 
+.titre_liste{
+	text-align: center;
+}
+
 table{
 	margin-left:auto;
     margin-right:auto;

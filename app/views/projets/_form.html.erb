@@ -1,7 +1,7 @@
 <%= form_for (@projet) do |f| %>
   <% if @projet.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@projet.errors.count, "error") %> prohibited this projet from being saved:</h2>
+      <h2><%= pluralize(@projet.errors.count, "error") %> Votre demande a bien été prise en compte.</h2>
 
       <ul>
       <% @projet.errors.full_messages.each do |message| %>
@@ -30,7 +30,7 @@
   </div>
   <div class="email">
     <%= f.label :email, :class => 'titre_champ' %><br>
-    <%= f.text_field :email %>
+    <%= f.email_field :email %>
   </div>
   <div class="description">
     <%= f.label :description, :class => 'titre_champ' %><br>

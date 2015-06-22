@@ -79,6 +79,7 @@ img.img_prise{
 	height: 250px;
 	border :1px solid #185E8E;
 	border-radius: 5px;
+	word-wrap: break-word;
 }
 .bouton {
 	margin-left: 85%;
@@ -107,15 +108,15 @@ img.img_prise{
 	width: 80%;
 	height: 250px;
 	padding: 1%;
+	overflow: auto;
 	background-color: white;
-    word-wrap: break-word;
-    border :1px solid #185E8E;
+            word-wrap: break-word;
+            border :1px solid #185E8E;
 	border-radius: 5px;
 }
 .description_index {
 	width: 80%;
 	word-wrap: break-word;
-
 }
 .titre {
 	text-align: center;

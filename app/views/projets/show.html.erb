@@ -4,10 +4,10 @@
   <p id="notice"><%= notice %></p>
   </div >
     <div class="personne">
-      <p> 
+      <p>
      <p>
-      Type d'organisme : 
-     </p> 
+      Type d'organisme :
+     </p>
      <p class="boite"><%= @projet.personne %>
      </p>
     </div>
@@ -27,7 +27,7 @@
   </div>
   <div class="telephone">
     <p>
-    Telephone  
+    Telephone
     </p>
     <p class="boite"><%= @projet.telephone %>
     </p>
@@ -43,12 +43,13 @@
    <p>
     Description
    </p>
-   <p class="boite_description"><%= @projet.description %>
-   </p>
+
+   <div class="boite_description"><%=simple_format h @projet.description %></div>
+
   </div>
   <div class="bouton">
    <%= link_to 'Modifier', edit_projet_path(@projet) %> |
-   <%= link_to 'Quitter', new_projet_path(@projet) %> 
+   <%= link_to 'Quitter', new_projet_path(@projet) %>
   </div>
   </div>
 

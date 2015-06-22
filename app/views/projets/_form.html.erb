@@ -11,7 +11,10 @@
     </div>
   <% end %>
 <div class="container">
-    <%= image_tag("prise.jpg", :alt => "prise contact", :class => "img_prise") %>
+  <div class="intro_form">
+    <p> Vous avez un projet web, n'hésitez pas à compléter ce formulaire ci-dessous, une équipe de Simplonve vous répondra dans les meilleurs délais </p>
+  </div>
+    <%= image_tag("logosimplon.svg", :alt => "logosimplon", :class => "logo_simplonve") %>
     <div class="personne">
     <label>Type d'organisme</label>
     <%= f.select :personne , ["Association", "Collectivité", "Entreprise", "Particulier", "Artisan"] , { include_blank: false } %>

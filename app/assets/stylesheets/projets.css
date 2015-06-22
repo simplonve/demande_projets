@@ -25,7 +25,13 @@ h1 {
 	padding-left: 1%;
 	padding-right: 2%;
 }
-img.img_prise{
+
+.intro_form{
+	color: #789C3C;
+	font-size:120%;
+}
+
+img.logo_simplonve{
 	float: right;
 }
 .personne {

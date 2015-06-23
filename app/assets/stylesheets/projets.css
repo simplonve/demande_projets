@@ -46,8 +46,8 @@ img.logo_simplonve{
 }
 
 
-.personne{
-
+.titre_show{
+	display:inline-block;
 }
 .champ_form {
 	margin-bottom: 1%;
@@ -76,6 +76,7 @@ img.logo_simplonve{
 	background-color: #185E8E;
 	border-radius: 5px;
 	color: white;
+	margin-top:10px;
 }
 .bouton2 {
 	height:2em;
@@ -89,7 +90,6 @@ img.logo_simplonve{
 	padding: 1%;
 	border-radius: 5px;
 	background-color: white;
-	border :1px solid #185E8E;
 	border-radius: 5px;
 	margin-top: -1%;
 }
@@ -100,8 +100,7 @@ img.logo_simplonve{
 	overflow: auto;
 	background-color: white;
     word-wrap: break-word;
-    border :1px solid #185E8E;
-	border-radius: 5px;
+    border-radius: 5px;
 	margin-top: -1%;
 }
 .description_index {

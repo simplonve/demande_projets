@@ -1,55 +1,51 @@
-  <div class="container">
+<div class="container">
+  <div class="titre_show
+
+  ">
+    <h1> Vérifier la saisie de votre projet </h1>
+    <div class="bouton">
+     <p><%= link_to 'Modifier', edit_projet_path(@projet) %> |
+     <%= link_to 'Quitter', new_projet_path(@projet) %>
+    </div>
+  </div>
+  <%= image_tag("logosimplon.svg", :alt => "prise contact", :class => "logo_simplonve") %>
   <div ="notice">
-  <p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
   </div >
-    <div class="personne">
-      <p>
-     <p>
+  <div class="personne">
+    <p>
       Type d'organisme :
-     </p>
-     <p class="boite"><%= @projet.personne %>
-     </p>
-    </div>
-    <div class="organisme">
-     <p>
-      Organisme
-     </p>
-     <p class="boite"><%= @projet.organisme %>
-     </p>
-    </div>
+    </p>
+    <p class="boite"><%= @projet.personne %>
+    </p>
+  </div>
+  <div class="organisme">
+    <p>Organisme</p>
+    <p class="boite"><%= @projet.organisme %></p>
+  </div>
   <div class="nom">
-     <p>
-      Nom
-     </p>
-     <p class="boite"><%= @projet.nom %>
-     </p>
+    <p>Nom</p>
+    <p class="boite"><%= @projet.nom %></p>
   </div>
   <div class="telephone">
-    <p>
-    Telephone
-    </p>
-    <p class="boite"><%= @projet.telephone %>
-    </p>
+    <p>Telephone</p>
+    <p class="boite"><%= @projet.telephone %></p>
   </div>
   <div class="email">
-    <p>
-    Email
-    </p>
-    <p class="boite"><%= @projet.email %>
-  </p>
+    <p>Email</p>
+    <p class="boite"><%= @projet.email %></p>
   </div>
   <div class="description">
-   <p>
-    Description
-   </p>
-
-   <div class="boite_description"><%=simple_format h @projet.description %></div>
-
+   <p>Description</p>
+  <div class="boite_description">
+  <%=simple_format h @projet.description %></div>
   </div>
-  <div class="bouton">
-   <%= link_to 'Modifier', edit_projet_path(@projet) %> |
+  <span class="bouton">
+   <%= link_to 'Modifier', edit_projet_path(@projet) %>
+  </span>
+  <span class="bouton">
    <%= link_to 'Quitter', new_projet_path(@projet) %>
-  </div>
-  </div>
+  </span>
+</div>
 
 

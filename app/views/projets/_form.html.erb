@@ -11,10 +11,10 @@
     </div>
   <% end %>
 <div class="container">
-   
+
    <%= image_tag("logosimplon.svg", :alt => "prise contact", :class => "logo_simplonve") %>
   <div class="personne">
-    <%= f.label :personne, :class => 'titre_champ', :value => 'Type de structure' %><br>
+    <%= f.label :personne, :class => 'titre_champ', :value => 'Type de structure' %>
     <%= f.select :personne , ["Association", "Collectivité", "Entreprise", "Particulier", "Artisan"] , { include_blank: false } %>
   </div>
   <div class="champ_form">

@@ -65,7 +65,4 @@ class ProjetsController < ApplicationController
       params.require(:projet).permit(:personne, :organisme, :nom, :telephone, :email, :description)
     end
 
-    def nl2br(s)
-      s.gsub(/\n/, '<br>')
-    end
 end

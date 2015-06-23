@@ -28,8 +28,8 @@
       <tr>
           <td class="bouton2"><%= link_to 'Voir', projet %></td>
           <td class="bouton2"><%= link_to 'Supprimer', projet, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %></td>
-          <td class="titre"><%= projet.created_at %></td>
-          <td class="titre"><%= projet.updated_at %></td>
+          <td class="titre">envoyé le: <%= projet.created_at %></td>
+          <td class="titre">mis à jour le: <%= projet.updated_at %></td>
       </tr>
        <tr>
          <th><p class="titre"> Type d'organisme </p></th>

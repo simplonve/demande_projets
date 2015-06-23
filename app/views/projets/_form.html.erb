@@ -1,8 +1,7 @@
 <%= form_for (@projet) do |f| %>
   <% if @projet.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@projet.errors.count, "error") %> Votre demande a bien été prise en compte.</h2>
-
+      <h2><%= pluralize(@projet.errors.count, "erreur") %> Votre demande a bien été prise en compte (cette description existe déjà).</h2>
       <ul>
       <% @projet.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -40,6 +39,5 @@
   <div class="actions">
     <input type="submit" class="bouton" value="Valider" />
   </div>
-
 <% end %>
 </div>

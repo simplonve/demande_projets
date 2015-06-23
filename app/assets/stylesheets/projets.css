@@ -154,10 +154,37 @@ img.logo_simplonve{
 }
 }
 
+@media (max-width:600px){
+	h1 {
+	color: #185E8E;
+	font-size:1.5em;
+	text-align: center;
+}
+.container {
+	margin-left: 0%;
+	margin-right: 0%;
+	background-color: #EEECEC;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 1%;
+	padding-right: 2%;
+
+}
+img.logo_simplonve{
+	display:none;
+}
+.champ_input {
+	width: 80%;
+	height: 2em;
+	border :1px solid #185E8E;
+	border-radius: 5px;
+}
+}
+
 @media (max-width:400px){
 	h1 {
 	color: #185E8E;
-	font-size:120%;
+	font-size:1em;
 	text-align: center;
 }
 }

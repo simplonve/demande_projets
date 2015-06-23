@@ -11,29 +11,27 @@
     </div>
   <% end %>
 <div class="container">
-  <div class="intro_form">
-    <p> Vous avez un projet web, n'hésitez pas à compléter ce formulaire ci-dessous, une équipe de Simplonve vous répondra dans les meilleurs délais </p>
-  </div>
-    <%= image_tag("logosimplon.svg", :alt => "logosimplon", :class => "logo_simplonve") %>
-    <div class="champ_form">
-    <label>Type d'organisme</label>
+   
+   <%= image_tag("logosimplon.svg", :alt => "prise contact", :class => "logo_simplonve") %>
+  <div class="personne">
+    <%= f.label :personne, :class => 'titre_champ', :value => 'Type de structure' %><br>
     <%= f.select :personne , ["Association", "Collectivité", "Entreprise", "Particulier", "Artisan"] , { include_blank: false } %>
   </div>
   <div class="champ_form">
     <%= f.label :organisme, :class => 'titre_champ' %><br>
-    <%= f.text_field :organisme, :maxlength =>40, :class => 'input_champ' %>
+    <%= f.text_field :organisme, :maxlength =>40, :class => 'champ_input' %>
   </div>
   <div class="champ_form">
-    <%= f.label :nom, :class => 'titre_champ' %><br>
-    <%= f.text_field :nom, :maxlength =>40, :class => 'input_champ' %>
+    <%= f.label :nom, :class => 'titre_champ', :value => 'votre nom' %><br>
+    <%= f.text_field :nom, :maxlength =>40, :class => 'champ_input' %>
   </div>
   <div class="champ_form">
     <%= f.label :telephone, :class => 'titre_champ' %><br>
-    <%= f.text_field :telephone, :maxlength =>40, :class => 'input_champ' %>
+    <%= f.text_field :telephone, :maxlength =>15, :class => 'champ_input' %>
   </div>
   <div class="champ_form">
     <%= f.label :email, :class => 'titre_champ' %><br>
-    <%= f.email_field :email, :maxlength =>40, :class => 'input_champ' %>
+    <%= f.email_field :email, :maxlength =>40, :class => 'champ_input' %>
   </div>
   <div class="description">
     <%= f.label :description, :class => 'titre_champ' %><br>

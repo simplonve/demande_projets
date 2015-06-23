@@ -11,7 +11,7 @@
    </tr>
   </thead>
   <tbody>
-    <% @projets.each do |projet| %>
+    <% @projets.reverse.each do |projet| %>
       <tr>
         <td class="titre" ><%= projet.personne %></td>
         <td class="titre"><%= projet.organisme %></td>

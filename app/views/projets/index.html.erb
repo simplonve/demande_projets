@@ -11,7 +11,7 @@
    </tr>
   </thead>
   <tbody>
-    <% @projets.each do |projet| %>
+    <% @projets.reverse.each do |projet| %>
       <tr>
         <td class="titre" ><%= projet.personne %></td>
         <td class="titre"><%= projet.organisme %></td>
@@ -20,15 +20,16 @@
         <td class="titre"><%= projet.email %></td>
       </tr>
       <tr>
-        <td colspan="5"><p class="titre">Description</p></td>
+        <td colspan="5" class="titre"><p class="titre">Description</p></td>
       </tr>
       <tr>
-        <td colspan="5"><div class="description_index"><%= projet.description %></div></td>
+        <td colspan="5"><div class="description_index"><%=simple_format h projet.description %></div></td>
       </tr>
       <tr>
           <td class="bouton2"><%= link_to 'Voir', projet %></td>
           <td class="bouton2"><%= link_to 'Supprimer', projet, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %></td>
-          <td colspan="3"></td>
+          <td class="titre">envoyé le: <%= projet.created_at %></td>
+          <td class="titre">mis à jour le: <%= projet.updated_at %></td>
       </tr>
        <tr>
          <th><p class="titre"> Type d'organisme </p></th>

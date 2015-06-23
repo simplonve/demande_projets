@@ -1,8 +1,7 @@
 <%= form_for (@projet) do |f| %>
   <% if @projet.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@projet.errors.count, "error") %> prohibited this projet from being saved:</h2>
-
+      <h2><%= pluralize(@projet.errors.count, "erreur") %> Votre demande a bien été prise en compte (cette description existe déjà).</h2>
       <ul>
       <% @projet.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,28 +10,51 @@
     </div>
   <% end %>
 <div class="container">
+<<<<<<< HEAD
     <div class ="">
       <%= image_tag("prise.jpg", :alt => "prise contact", :class => "img_prise") %>
     </div>
     <div class="personne">
     <label>Type d'organisme</label>
+=======
+
+   <%= image_tag("logosimplon.svg", :alt => "prise contact", :class => "logo_simplonve") %>
+  <div class="personne">
+    <%= f.label :personne, :class => 'titre_champ', :value => 'Type de structure' %>
+>>>>>>> fd4e2faaea6a6f6547e0cfb747895a88c8ec6dd1
     <%= f.select :personne , ["Association", "Collectivité", "Entreprise", "Particulier", "Artisan"] , { include_blank: false } %>
   </div>
-  <div class="organisme">
+  <div class="champ_form">
     <%= f.label :organisme, :class => 'titre_champ' %><br>
+<<<<<<< HEAD
     <%= f.text_field :organisme, :maxlength => 40%>
   </div>
   <div class="nom">
     <%= f.label :nom, :class => 'titre_champ' %><br>
     <%= f.text_field :nom, :maxlength => 40 %>
+=======
+    <%= f.text_field :organisme, :maxlength =>40, :class => 'champ_input' %>
   </div>
-  <div class="telephone">
+  <div class="champ_form">
+    <%= f.label :nom, :class => 'titre_champ', :value => 'votre nom' %><br>
+    <%= f.text_field :nom, :maxlength =>40, :class => 'champ_input' %>
+>>>>>>> fd4e2faaea6a6f6547e0cfb747895a88c8ec6dd1
+  </div>
+  <div class="champ_form">
     <%= f.label :telephone, :class => 'titre_champ' %><br>
+<<<<<<< HEAD
     <%= f.text_field :telephone, :maxlength => 40 %>
+=======
+    <%= f.text_field :telephone, :maxlength =>15, :class => 'champ_input' %>
+>>>>>>> fd4e2faaea6a6f6547e0cfb747895a88c8ec6dd1
   </div>
-  <div class="email">
+  <div class="champ_form">
     <%= f.label :email, :class => 'titre_champ' %><br>
+<<<<<<< HEAD
     <%= f.email_field :email, :maxlength => 40 {:placeholder => 'example : mon email@domain.com'} %>
+=======
+    <%= f.email_field :email, :maxlength =>40, :class => 'champ_input' %>
+>>>>>>> fd4e2faaea6a6f6547e0cfb747895a88c8ec6dd1
   </div>
   <div class="description">
     <%= f.label :description, :class => 'titre_champ' %><br>
@@ -41,6 +63,5 @@
   <div class="actions">
     <input type="submit" class="bouton" value="Valider" />
   </div>
-
 <% end %>
 </div>

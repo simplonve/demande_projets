@@ -11,30 +11,32 @@
     </div>
   <% end %>
 <div class="container">
-    <%= image_tag("prise.jpg", :alt => "prise contact", :class => "img_prise") %>
+    <div class ="">
+      <%= image_tag("prise.jpg", :alt => "prise contact", :class => "img_prise") %>
+    </div>
     <div class="personne">
     <label>Type d'organisme</label>
     <%= f.select :personne , ["Association", "Collectivité", "Entreprise", "Particulier", "Artisan"] , { include_blank: false } %>
   </div>
   <div class="organisme">
     <%= f.label :organisme, :class => 'titre_champ' %><br>
-    <%= f.text_field :organisme %>
+    <%= f.text_field :organisme, :maxlength => 40%>
   </div>
   <div class="nom">
     <%= f.label :nom, :class => 'titre_champ' %><br>
-    <%= f.text_field :nom %>
+    <%= f.text_field :nom, :maxlength => 40 %>
   </div>
   <div class="telephone">
     <%= f.label :telephone, :class => 'titre_champ' %><br>
-    <%= f.text_field :telephone %>
+    <%= f.text_field :telephone, :maxlength => 40 %>
   </div>
   <div class="email">
     <%= f.label :email, :class => 'titre_champ' %><br>
-    <%= f.text_field :email %>
+    <%= f.email_field :email, :maxlength => 40 {:placeholder => 'example : mon email@domain.com'} %>
   </div>
   <div class="description">
     <%= f.label :description, :class => 'titre_champ' %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :maxlength => 40 %>
   </div>
   <div class="actions">
     <input type="submit" class="bouton" value="Valider" />

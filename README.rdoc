@@ -1,19 +1,23 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application with Ruby on Rails
 
-Things you may want to cover:
+Requirements
 
-* Ruby version
+Ruby version 2.2-1 
 
 * System dependencies
 
-* Configuration
+Rails 4.2.4
+See Gemfile
 
+* Configuration
+use 'bundle install',  
 * Database creation
 
 * Database initialization
+
+'db:migrate' if you want to migrate database
 
 * How to run the test suite
 
@@ -21,8 +25,12 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+ on heroku rails use pg, 
 
+* Utilsation:
+Pour voir les messages postés dans cette application, il faut se rendre sur le lien htpps://demande-projets.nom_serveur.tld/projets
+To watch where the posted messages are, please go to this link:
+htpps://demande-projets.host_name.tld/projets
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

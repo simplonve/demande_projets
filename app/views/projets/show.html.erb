@@ -1,12 +1,6 @@
 <div class="container">
-  <div class="titre_show
-
-  ">
-    <h1> Vérifier la saisie de votre projet </h1>
-    <div class="bouton">
-     <p><%= link_to 'Modifier', edit_projet_path(@projet) %> |
-     <%= link_to 'Quitter', new_projet_path(@projet) %>
-    </div>
+  <div class="titre_show">
+    
   </div>
   <%= image_tag("logosimplon.svg", :alt => "prise contact", :class => "logo_simplonve") %>
   <div ="notice">
@@ -40,6 +34,7 @@
   <div class="boite_description">
   <%=simple_format h @projet.description %></div>
   </div>
+    <h1> Vérifier la saisie de votre projet </h1>
   <span class="bouton">
    <%= link_to 'Modifier', edit_projet_path(@projet) %>
   </span>

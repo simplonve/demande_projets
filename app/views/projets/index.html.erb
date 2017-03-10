@@ -53,7 +53,12 @@
       Comptez vous être présent ou êtes vous déjà présent sur les réseaux sociaux: <%= projet.reseaux_sociaux %>
     </li>
       <% end %>
-    <li>Date escomptée de mise en ligne: <%= l projet.date_mise_en_ligne, format: :middle_long  %></li>
+    <% if projet.date_mise_en_ligne.present? %>  
+    <li>Date escomptée de mise en ligne: <%= l projet.date_mise_en_ligne, format: :middle_long  %>
+    <% else %>
+    <p>pas de date<p>
+    </li>
+    <% end %>
     <li>Compléments d'information: <%=simple_format h projet.complements_infos %></li>
     <li><h3 class="bouton"><%= link_to 'Voir', projet %></h3></li>
     <li><h3 class="bouton"><%= link_to 'Supprimer', projet, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %></h3></li>

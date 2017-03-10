@@ -21,9 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  username: demande
-  password: haricots
-  database: demande_production
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: db/production.sqlite3

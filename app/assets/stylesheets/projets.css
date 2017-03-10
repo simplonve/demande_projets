@@ -24,9 +24,8 @@ h1 {
 }
 .obligatoire {
 	color: red;
-	font-weight: : bold;
+	font-weight: bold;
 	font-size: 1.3em;
-
 }
 .container {
 	margin-left:10%;
@@ -46,11 +45,11 @@ h1 {
 }
 img.logo_simplonve{
 	float: right;
-	width:40%;
+	width: 40%;
 }
 img.remerciements {
 	display: block;
-	width:80%;
+	width: 80%;
 }
 .titre_show{
 	display:inline-block;

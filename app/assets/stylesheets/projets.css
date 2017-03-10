@@ -9,83 +9,81 @@
     font-weight: normal;
     font-style: normal;
 }
-html,body {
+html, body {
 	font-family: 'fonts';
 }
 h1 {
-	color: #185E8E;
+	color: #3F4850;
 	text-align: center;
 }
-
 .sous_titre{
 	text-align: center;
 	margin-bottom: 1%;
-	color:#185E8E;
+	color:#999C29;
 	font-size:1.1em;
 }
+.obligatoire {
+	color: red;
+	font-weight: : bold;
+	font-size: 1.3em;
+
+}
 .container {
-	margin-left:20%;
-	margin-right: 20%;
+	margin-left:10%;
+	margin-right: 10%;
 	background-color: #EEECEC;
 	padding-top: 1%;
 	padding-bottom: 1%;
 	padding-left: 1%;
 	padding-right: 2%;
-
-
 }
 .personne {
 	margin-bottom: 1%;
-
 }
-
-
 .texte_intro{
 	color:#185E8E;
 	font-size: 1.1em;
 }
-
 img.logo_simplonve{
 	float: right;
 	width:40%;
 }
-
-
+img.remerciements {
+	display: block;
+	width:80%;
+}
 .titre_show{
 	display:inline-block;
 }
 .champ_form {
-	margin-bottom: 1%;
-	margin-top: 1%;
+	margin-bottom: 5%;
+	margin-top: 5%;
 }
-
 .champ_input {
 	width: 40%;
 	height: 2em;
 	border-radius: 5px;
 }
-
 .description {
-	margin-bottom: 1%;
+	margin: 10px;
 }
-#projet_description {
+#projet_description, #projet_carateristiques_hebergement, #projet_fonctionnalites, #projet_langues, #projet_promotion_reseaux_sociaux, #projet_complements_infos {
 	width: 100%;
 	height: 250px;
 	border-radius: 5px;
 	word-wrap: break-word;
 }
 .bouton {
-	margin-left: 85%;
 	width: 15%;
 	height: 2em;
-	background-color: #185E8E;
+	background-color: #999C29;
 	border-radius: 5px;
 	color: white;
 	margin-top:10px;
 }
 .bouton2 {
 	height:2em;
-	background-color: #185E8E;
+	background-color: #999C29;
 	border-radius: 5px;
 	color: white;
 }
@@ -130,65 +128,51 @@ a {
     width: 15%;
     height: 2em;
     text-decoration: none;
-    color: white;
+    color: #7d6464;
     padding: 1%;
     border-radius: 5px;
 }
 
-
-@media (max-width:600px){
-.container {
-	margin-left: 0%;
-	margin-right: 0%;
-	background-color: #EEECEC;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	padding-left: 1%;
-	padding-right: 2%;
-
-}
-img.logo_simplonve{
-	display:none;
-}
-.champ_input {
-	width: 80%;
-	height: 2em;
-	border :1px solid #185E8E;
-	border-radius: 5px;
-}
-}
+/* Medias Querries */
 
 @media (max-width:600px){
 	h1 {
-	color: #185E8E;
-	font-size:1.5em;
-	text-align: center;
+		color: #185E8E;
+		font-size:1.5em;
+		text-align: center;
+    }
+    .container {
+		margin-left: 0%;
+		margin-right: 0%;
+		background-color: #EEECEC;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		padding-left: 1%;
+		padding-right: 2%;
+   }
+	.champ_input {
+		width: 80%;
+		height: 2em;
+		border :1px solid #185E8E;
+		border-radius: 5px;
+    }
 }
-.container {
-	margin-left: 0%;
-	margin-right: 0%;
-	background-color: #EEECEC;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	padding-left: 1%;
-	padding-right: 2%;
-
-}
-img.logo_simplonve{
-	display:none;
-}
-.champ_input {
-	width: 80%;
-	height: 2em;
-	border :1px solid #185E8E;
-	border-radius: 5px;
-}
-
 
 @media (max-width:400px){
 	h1 {
-	color: #185E8E;
-	font-size:1em;
-	text-align: center;
+		color: #185E8E;
+		font-size:1em;
+		text-align: center;
+    }
+    img.logo_simplonve{
+	float: none;
+	width:40%;
 }
+    select {
+    	width: 100%;
+    }
+    .bouton {
+	    margin-left: 0;
+	    width: inherit;
+    }
 }

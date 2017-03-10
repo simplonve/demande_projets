@@ -4,7 +4,7 @@ Application with Ruby on Rails
 
 Requirements
 
-Ruby version 2.2-1 
+Ruby version 2.2-1
 
 * System dependencies
 
@@ -12,7 +12,7 @@ Rails 4.2.4
 See Gemfile
 
 * Configuration
-use 'bundle install',  
+use 'bundle install',
 * Database creation
 
 * Database initialization
@@ -25,9 +25,9 @@ use 'bundle install',
 
 * Deployment instructions
 
- on heroku rails use pg, 
+ on heroku rails use pg,
 
-* Utilsation:
+* Utilisation:
 Pour voir les messages postés dans cette application, il faut se rendre sur le lien htpps://demande-projets.nom_serveur.tld/projets
 To watch where the posted messages are, please go to this link:
 htpps://demande-projets.host_name.tld/projets

@@ -1,45 +1,65 @@
 <p id="notice"><%= notice %></p>
 <h1 class ="titre_liste">Liste des demandes de projet</h1>
-<table>
-  <thead>
-    <tr>
-      <th><p class="titre"> Type d'organisme </p></th>
-      <th><p class="titre"> Organisme </p></th>
-      <th><p class="titre"> Nom </p></th>
-      <th><p class="titre"> Telephone </p></th>
-      <th><p class="titre"> Email </p></th>
-   </tr>
-  </thead>
-  <tbody>
-    <% @projets.reverse.each do |projet| %>
-      <tr>
-        <td class="titre" ><%= projet.personne %></td>
-        <td class="titre"><%= projet.organisme %></td>
-        <td class="titre"><%= projet.nom %></td>
-        <td class="titre"><%= projet.telephone %></td>
-        <td class="titre"><%= projet.email %></td>
-      </tr>
-      <tr>
-        <td colspan="5" class="titre"><p class="titre">Description</p></td>
-      </tr>
-      <tr>
-        <td colspan="5"><div class="description_index"><%=simple_format h projet.description %></div></td>
-      </tr>
-      <tr>
-          <td class="bouton2"><%= link_to 'Voir', projet %></td>
-          <td class="bouton2"><%= link_to 'Supprimer', projet, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %></td>
-          <td class="titre">envoyé le: <%= projet.created_at %></td>
-          <td class="titre">mis à jour le: <%= projet.updated_at %></td>
-      </tr>
-       <tr>
-         <th><p class="titre"> Type d'organisme </p></th>
-         <th><p class="titre"> Organisme </p></th>
-         <th><p class="titre"> Nom </p></th>
-         <th><p class="titre"> Telephone </p></th>
-         <th><p class="titre"> Email </p></th>
-      </tr>
-     <% end %>
-  </tbody>
-</table>
+<% @projets.reverse.each do |projet| %>
+  <ul>
+    <li>Type de structure : <%= projet.personne %>, Organisme: <%= projet.organisme %></li>
+  <li>Nom: <%= projet.nom %>, Prénom: <%= projet.nom %></li>, Telephone: <%= projet.telephone %>, Email: <%= projet.email %></li>
+  <li>Description: <%=simple_format h projet.description %></li>
+  <li>Cahier des charges ou éventuel référentiel technique ?: <%= projet.cahier_des_charges %></li>
+  <li>
+  <% if projet.nom_de_domaine = "Oui" %>
+  Nom de domaine ?: <%= projet.nom_de_domaine %> = <%= projet.domaine %>
+  <% else %>
+     Nom de domaine ?: <%= projet.nom_de_domaine %>
+    </li>
+  <% end %>
+  <li>
+    <% if projet.hebergement = "Oui" %>
+        Hébergement ?: <%= projet.hebergement %>
+        <%=simple_format h projet.carateristiques_hebergement %>
+    <% else %>
+       Hébergement ?: <%= projet.hebergement %>
+  </li>
+    <% end %>
+  <li>Charte graphique ?: <%= projet.charte_graphique %>  </li>
+  <li>Foncionnalités envisagées ?: <%=simple_format h projet.fonctionnalites %></li>
+  <li>
+    <% if projet.vente = "Oui" %>
+      Vente en ligne ?: <%= projet.vente %>
+      Moyen de paiements: <%= projet.moyen_paiement %>
+    <% else %>
+      Vente en ligne ? <%= projet.vente %>
+  </li>
+    <% end %>
+  <li>Vous rédiger vous-mêmes les contenus textes ?: <%= projet.redaction %></li>
+  <li>
+    <% if projet.multi_langue = "Oui" %>
+        Projet multilangues ?: <%= projet.multi_langue %>
+        <%=simple_format h projet.langues %>
+    <% else %>
+       Projet multi-langues ?: <%= projet.multi_langue %>
+  </li>
+    <% end %>
+  <li>Vous fournissez les photos ?: <%= projet.photos %></li>
+  <li>Vous fournissez les vidéos ?: <%= projet.photos %></li>
+  <li>Référencer le site dès son lancement ?: <%= projet.referencement %></li>
+  <li>
+    <% if projet.reseaux_sociaux = "Oui" %>
+      Comptez vous être présent ou êtes vous déjà présent sur les réseaux sociaux: <%= projet.reseaux_sociaux %>
+      désirez vous un accompagnement sur l'utilisation des réseaux sociaux par nos partenaires ?:
+      <%=simple_format h projet.promotion_reseaux_sociaux %>
+    <% else %>
+      Comptez vous être présent ou êtes vous déjà présent sur les réseaux sociaux: <%= projet.reseaux_sociaux %>
+    </li>
+      <% end %>
+    <li>Date escomptée de mise en ligne: <%= l projet.date_mise_en_ligne, format: :middle_long  %></li>
+    <li>Compléments d'information: <%=simple_format h projet.complements_infos %></li>
+    <li><h3 class="bouton"><%= link_to 'Voir', projet %></h3></li>
+    <li><h3 class="bouton"><%= link_to 'Supprimer', projet, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %></h3></li>
+    <li><h3 class="titre">envoyé le: <%= projet.created_at %></h3></li>
+    <li><h3 class="titre">mis à jour le: <%= projet.updated_at %></h3></li>
+    <hr style="width: 50%; background: none repeat scroll 0% 0% #FF0000; height: 5px;" />
+  </ul>
+  <% end %>
 <br>
 

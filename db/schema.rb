@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618073813) do
+ActiveRecord::Schema.define(version: 20170309233205) do
 
   create_table "projets", force: :cascade do |t|
     t.string   "personne"
@@ -20,8 +20,28 @@ ActiveRecord::Schema.define(version: 20150618073813) do
     t.string   "telephone"
     t.string   "email"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "cahier_des_charges"
+    t.string   "prenom"
+    t.string   "nom_de_domaine"
+    t.string   "domaine"
+    t.string   "hebergement"
+    t.string   "carateristiques_hebergement"
+    t.string   "charte_graphique"
+    t.string   "fonctionnalites"
+    t.string   "vente"
+    t.string   "moyen_paiement"
+    t.string   "redaction"
+    t.string   "multi_langue"
+    t.string   "langues"
+    t.string   "photos"
+    t.string   "videos"
+    t.string   "referencement"
+    t.string   "reseaux_sociaux"
+    t.string   "promotion_reseaux_sociaux"
+    t.string   "complements_infos"
+    t.datetime "date_mise_en_ligne"
   end
 
 end

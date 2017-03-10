@@ -1,4 +1,10 @@
 class ProjetsController < ApplicationController
+
+  before_action :set_locale
+  def set_locale
+    I18n.locale = :fr
+  end
+
 	before_action :set_projet, only: [:show, :edit, :update, :destroy]
 
 
@@ -56,7 +62,7 @@ class ProjetsController < ApplicationController
     end
 
     def projet_params
-      params.require(:projet).permit(:personne, :organisme, :nom, :telephone, :email, :description)
+      params.require(:projet).permit(:personne, :organisme, :nom, :prenom, :cahier_des_charges, :telephone, :email, :description, :nom_de_domaine, :domaine, :hebergement, :carateristiques_hebergement, :charte_graphique, :fonctionnalites, :vente, :moyen_paiement, :redaction, :multi_langue, :langues, :photos, :videos, :referencement, :reseaux_sociaux, :promotion_reseaux_sociaux, :date_mise_en_ligne, :complements_infos)
     end
 
 end

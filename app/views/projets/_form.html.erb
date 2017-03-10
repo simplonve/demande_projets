@@ -10,32 +10,128 @@
     </div>
   <% end %>
 <div class="container">
-
-   <%= image_tag("logosimplon.svg", :alt => "prise contact", :class => "logo_simplonve") %>
+   <%= image_tag("tux_oeuf.png", :alt => "prise contact", :class => "logo_simplonve") %>
+   <h4 class="obligatoire">* Obligatoire</h4>
   <div class="personne">
-    <%= f.label :personne, :class => 'titre_champ', :value => 'Type de structure' %>
-    <%= f.select :personne , ["Association", "Collectivité", "Entreprise", "Particulier", "Artisan"] , { include_blank: false } %>
+    <%= f.label :personne, :class => 'titre_champ', :value => 'Type de structure' %> <span class="obligatoire">*</span><br>
+    <%= f.select :personne , ["Particulier","Artisan", "Association", "Collectivité", "Entreprise"] , { include_blank: false } %>
   </div>
   <div class="champ_form">
     <%= f.label :organisme, :class => 'titre_champ' %><br>
-    <%= f.text_field :organisme, :maxlength =>40, :class => 'champ_input' %>
+    <%= f.text_field :organisme, :maxlength => 40, :class => 'champ_input' %>
   </div>
   <div class="champ_form">
-    <%= f.label :nom, :class => 'titre_champ', :value => 'votre nom' %><br>
-    <%= f.text_field :nom, :maxlength =>40, :class => 'champ_input' %>
+    <%= f.label :nom, :class => 'titre_champ', :value => 'votre nom' %> <span class="obligatoire">*</span><br>
+    <%= f.text_field :nom, :maxlength => 40, :class => 'champ_input' %>
+  </div>
+  <div class="champ_form">
+    <%= f.label :prenom, :class => 'titre_champ', :value => 'votre prénom' %><span class="obligatoire">*</span><br>
+    <%= f.text_field :prenom, :maxlength => 40, :class => 'champ_input' %>
+  </div>
+  <div class="champ_form">
+    <%= f.label :email, :class => 'titre_champ', :value =>'votre adresse email de contact' %><span class="obligatoire">*</span><br>
+    <%= f.email_field :email, :maxlength => 40, :class => 'champ_input' %>
   </div>
   <div class="champ_form">
     <%= f.label :telephone, :class => 'titre_champ' %><br>
-    <%= f.text_field :telephone, :maxlength =>13, :class => 'champ_input' %>
-  </div>
-  <div class="champ_form">
-    <%= f.label :email, :class => 'titre_champ' %><br>
-    <%= f.email_field :email, :maxlength =>40, :class => 'champ_input' %>
+    <%= f.text_field :telephone, :maxlength => 13, :class => 'champ_input' %>
   </div>
   <div class="description">
-    <%= f.label :description, :class => 'titre_champ' %><br>
-    <%= f.text_area :description, :maxlength => 40 %>
+    <%= f.label :description, :class => 'titre_champ', :value => 'Descriptif du projet' %><span class="obligatoire">*</span><br>
+    <%= f.text_area :description, :maxlength => 400 %>
   </div>
+  <div class="champ_form">
+    <%= f.label :cahier_des_charges, :value =>'Avez vous déjà rédigé un cahier des charges ou éventuel référentiel technique ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :cahier_des_charges, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="champ_form">
+    <%= f.label :nom_de_domaine, :value =>'Possédez-vous déjà un nom de domaine ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :nom_de_domaine, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="champ_form">
+    <%= f.label :domaine, :class => 'champ_input', :value => 'Si oui, merci de le saisir ici' %><br>
+    <%= f.text_field :domaine, :maxlength => 40, :class => 'champ_input' %>
+  </div>
+  <div class="champ_form">
+    <%= f.label :hebergement, :value =>'Possédez-vous un hébergement ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :hebergement, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="description">
+    <%= f.label :carateristiques_hebergement, :class => 'titre_champ', :value => 'Si oui pouvez vous nous en donner les caractéristiques ?' %><br>
+    <i>capacité de stockage, nom de l'hébergeur, version de php, nombre de bases SQL, etc...</i><br>
+    <%= f.text_area :carateristiques_hebergement, :maxlength => 100 %>
+  </div>
+  <div class="champ_form">
+    <%= f.label :charte_graphique, :value =>'Possédez vous déjà une charte graphique pour votre communication papier qui pourrait être déclinée pour le site Internet ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :charte_graphique, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+    <div class="description">
+    <%= f.label :fonctionnalites, :class => 'titre_champ', :value => 'Fonctionnalités envisagées' %><span class="obligatoire">*</span><br>
+    <i>par exemple: votre site serra-t-il amené à diffuser des vidéos/musiques, gestion de newsletter...?</i><br>
+    <%= f.text_area :fonctionnalites, :maxlength => 100 %>
+  </div>
+  <div class="champ_form">
+    <%= f.label :vente, :value =>'Désirez vous effectuer de la vente en ligne ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :vente, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="personne">
+    <%= f.label :moyen_paiement, :class => 'titre_champ', :value => 'Si vous comptez vendre en ligne quel moyen de paiement est envisagé ?' %><br>
+    <%= f.select :moyen_paiement , ["Paypal / CB (paiement sécurisé externe)", "Solution Bancaire (intégrée au site)"] , { include_blank: true } %>
+  </div>
+  <div class="champ_form">
+    <%= f.label :redaction, :value =>'Allez vous rédiger vous-mêmes les contenus textes ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :redaction, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="champ_form">
+    <%= f.label :multi_langue, :value =>'Le site projeté sera-t-il multilingue (accès en plusieurs langues) ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :multi_langue, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="description">
+    <%= f.label :langues, :class => 'titre_champ', :value => 'Si oui en quelles langues ? ' %>
+    <%= f.text_area :langues, :maxlength => 100 %>
+  </div>
+  <div class="champ_form">
+    <%= f.label :photos, :value =>'Fournissez vous les photos à intégrer au site ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :photos, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="champ_form">
+    <%= f.label :videos, :value =>'Fournissez vous les vidéos à intégrer au site ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :videos, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="champ_form">
+    <%= f.label :referencement, :value =>'Désirez vous faire référencer votre site dès son lancement ?' %><span class="obligatoire">*</span><br>
+    <%= f.check_box( :referencement, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="champ_form">
+    <%= f.label :reseaux_sociaux, :value =>'Comptez vous être présent ou êtes vous déjà présent sur les réseaux sociaux' %><br>
+    <%= f.check_box( :reseaux_sociaux, {}, "Oui", "Non") %> OUI (cochez la case)<br>
+    NON (laissez la case vide)
+  </div>
+  <div class="description">
+    <%= f.label :promotion_reseaux_sociaux, :class => 'titre_champ', :value => 'Si oui désirez vous un accompagnement sur l\'utilisation des Réseaux sociaux par nos Partenaires ?' %><br>
+    <i>(promotion de votre activité, fidélisation....)</i><br>
+    <%= f.text_area :promotion_reseaux_sociaux, :maxlength => 100 %>
+  </div>
+  <div class="champ_form">
+    <%= f.label :date_mise_en_ligne, :class => 'titre_champ', :value =>'Date escomptée de mise en ligne ?' %><span class="obligatoire">*</span><br>
+    <%= f.date_select :date_mise_en_ligne %>
+  </div>
+  <div class="description">
+    <%= f.label :complements_infos, :class => 'titre_champ', :value => 'Compléments d\'information' %><br>
+    <i>Saisissez ici toute information complémentaire liée à votre projet</i>
+    <%= f.text_area :complements_infos, :maxlength => 100 %>
+  </div>
+
   <div class="actions">
     <input type="submit" class="bouton" value="Valider" />
   </div>

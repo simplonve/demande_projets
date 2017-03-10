@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 <h1 class ="titre_liste">Liste des demandes de projet</h1>
 <% @projets.reverse.each do |projet| %>
+  <% if projet.present? %>
   <ul>
     <li>Type de structure : <%= projet.personne %>, Organisme: <%= projet.organisme %></li>
   <li>Nom: <%= projet.nom %>, Prénom: <%= projet.nom %></li>, Telephone: <%= projet.telephone %>, Email: <%= projet.email %></li>
@@ -60,6 +61,7 @@
     <li><h3 class="titre">mis à jour le: <%= projet.updated_at %></h3></li>
     <hr style="width: 50%; background: none repeat scroll 0% 0% #FF0000; height: 5px;" />
   </ul>
+  <% end %>
   <% end %>
 <br>
 

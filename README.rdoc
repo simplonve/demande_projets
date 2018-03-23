@@ -30,7 +30,7 @@ use 'bundle install',
 * Utilisation:
 Pour voir les messages postés dans cette application, il faut se rendre sur le lien htpps://demande-projets.nom_serveur.tld/projets
 To watch where the posted messages are, please go to this link:
-htpps://demande-projets.host_name.tld/projets
+https://demande-projets.host_name.tld/projets
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

@@ -19,7 +19,7 @@ h1 {
 .sous_titre{
 	text-align: center;
 	margin-bottom: 1%;
-	color:#999C29;
+	color:#9C298A;
 	font-size:1.1em;
 }
 .obligatoire {
@@ -75,16 +75,19 @@ img.remerciements {
 .bouton {
 	width: 15%;
 	height: 2em;
-	background-color: #999C29;
+	background-color: #c16ac6;
 	border-radius: 5px;
 	color: white;
 	margin-top:10px;
 }
 .bouton2 {
 	height:2em;
-	background-color: #999C29;
+	background-color: #c16ac6;
 	border-radius: 5px;
 	color: white;
+}
+.bouton:hover{
+	background-color: 
 }
 .boite {
 	width: 40%;
@@ -130,6 +133,9 @@ a {
     color: #7d6464;
     padding: 1%;
     border-radius: 5px;
+}
+a:hover {
+	color: #9C298A;
 }
 
 /* Medias Querries */

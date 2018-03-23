@@ -53,7 +53,7 @@
       Comptez vous être présent ou êtes vous déjà présent sur les réseaux sociaux: <%= projet.reseaux_sociaux %>
     </li>
       <% end %>
-    <% if projet.date_mise_en_ligne.present? %>  
+    <% if projet.date_mise_en_ligne.present? %>
     <li>Date escomptée de mise en ligne: <%= l projet.date_mise_en_ligne, format: :middle_long  %>
     <% else %>
     <p>pas de date<p>

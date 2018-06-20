@@ -5,7 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-ActiveSupport.halt_callback_chains_on_return_false = false
+# ActiveSupport.halt_callback_chains_on_return_false = false
 
 module Demande
   class Application < Rails::Application

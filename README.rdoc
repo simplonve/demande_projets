@@ -8,7 +8,7 @@ Ruby version 2.2-1
 
 * System dependencies
 
-Rails 4.2.4
+Rails 5.1.5
 See Gemfile
 
 * Configuration

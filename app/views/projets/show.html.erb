@@ -3,6 +3,7 @@
     <p id="notice"><%= notice %></p>
   </div >
   <%= image_tag("tux_oeuf.png", :alt => "prise contact", :class => "logo_simplonve") %>
+  <h3><strong>Après avoir rempli et vérifier votre demande, veuillez s'il vous plaît me prévenir, en remplissant le formulaire de contact à cette adresse: <%= link_to 'Contact', "https://tranchesdevie.frama.site/contact", :target => "_blank", :alt => "Contact", :title => "me Contacter" %></strong></h3>
     <h1> Vérifier la saisie de votre projet </h1>
   <div>
     <p>
@@ -38,23 +39,18 @@
     </div>
   <div>
     <p>Cahier des charges ou éventuel référentiel technique ?<span class="boite"><%= @projet.cahier_des_charges %></span></p>
+  </div><br>
+  <div>
+   <p>Nom de domaine ?<span class="boite"> <%= @projet.nom_de_domaine %></span></p>
+    <%= @projet.domaine %><br>
   </div>
   <div>
-  <% if @projet.nom_de_domaine = "Oui" %>
-      <p>Nom de domaine ?<span class="boite"> <%= @projet.nom_de_domaine %> = <%= @projet.domaine %></span></p>
-  <% else %>
-     <p>Nom de domaine ?<span class="boite"> <%= @projet.nom_de_domaine %></span></p>
-    </div>
-  <% end %>
-  <div>
-    <% if @projet.hebergement = "Oui" %>
-        <p>Hébergement ?<span class="boite"> <%= @projet.hebergement %></span></p>
-        <div class="boite_description">
+    <p>Hébergement ?<span class="boite"> <%= @projet.hebergement %></span></p><br>
+  </div>
+    <% if @projet.hebergement == "Oui" %>
+    <div class="boite_description">
           <%=simple_format h @projet.carateristiques_hebergement %>
-        </div>
-    <% else %>
-       <p>Hébergement ?<span class="boite"> <%= @projet.hebergement %></span></p>
-  </div>
+    </div>
     <% end %>
   <div>
     <p>Charte graphique ? <span class="boite"><%= @projet.charte_graphique %></span></p>
@@ -66,63 +62,55 @@
       </div>
   </div>
   <div>
-    <% if @projet.vente = "Oui" %>
-      <p>Vente en ligne ? <span class="boite"><%= @projet.vente %></span></p>
-      <p>Moyen de paiements: <span class="boite"><%= @projet.moyen_paiement %></span></p>
-    <% else %>
-      <p>Vente en ligne ? <span class="boite"><%= @projet.vente %></span></p>
+      <p>Vente en ligne ? <span class="boite"><%= @projet.vente %></span></p><br>
+      <% if @projet.vente == "Oui" %>
+      <p>Moyen de paiements: <span class="boite"><%= @projet.moyen_paiement %></span></p><br>
+      <% end %>
   </div>
-    <% end %>
   <div>
+    <p>Vous rédiger vous-mêmes les contenus textes ?: <span class="boite"><%= @projet.redaction %></span></p><br>
   </div>
-    <p>Vous rédiger vous-mêmes les contenus textes ?: <span class="boite"><%= @projet.redaction %></span>
   <div>
-  <div>
-    <% if @projet.multi_langue = "Oui" %>
-      <p>Projet multilangues ? <span class="boite"><%= @projet.multi_langue %></span></p>
+      <p>Projet multilangues ? <span class="boite"><%= @projet.multi_langue %></span></p><br>
+      <% if @projet.multi_langue == "Oui" %>
       <div class="boite_description">
           <%=simple_format h @projet.langues %>
       </div>
-    <% else %>
-      <p>Projet multi-langues ? <span class="boite"><%= @projet.multi_langue %></span></p>
-  </div>
-    <% end %>
-  <div>
-      <p>Vous fournissez les photos ? <span class="boite"><%= @projet.photos %></span></p>
+      <% end %>
   </div>
   <div>
-      <p>Vous fournissez les vidéos ? <span class="boite"><%= @projet.photos %></span></p>
+      <p>Vous fournissez les photos ? <span class="boite"><%= @projet.photos %></span></p><br>
   </div>
   <div>
-      <p>Référencer le site dès son lancement ? <span class="boite"><%= @projet.referencement %></span></p>
+      <p>Vous fournissez les vidéos ? <span class="boite"><%= @projet.photos %></span></p><br>
   </div>
   <div>
-    <% if @projet.reseaux_sociaux = "Oui" %>
+      <p>Référencer le site dès son lancement ? <span class="boite"><%= @projet.referencement %></span></p><br>
+  </div>
+  <div>
       <p>Comptez vous être présent ou êtes vous déjà présent sur les réseaux sociaux: <span class="boite"><%= @projet.reseaux_sociaux %></span></p>
+  </div>
+  <div>
       <p>désirez vous un accompagnement sur l'utilisation des réseaux sociaux par nos partenaires ?</p>
       <div class="boite_description">
             <%=simple_format h @projet.promotion_reseaux_sociaux %>
       </div>
-    <% else %>
-      <p>Comptez vous être présent ou êtes vous déjà présent sur les réseaux sociaux: <span class="boite"><%= @projet.reseaux_sociaux %></span></p>
-    </div>
-      <% end %>
-    <div>
+  </div>
+  <div>
       <p>Date escomptée de mise en ligne:</p>
       <p class="boite"><%= l @projet.date_mise_en_ligne, format: :middle_long  %></p>
     </div>
-    <div>
+  <div>
       <p>Compléments d'information: <p>
       <div class="boite_description">
             <%=simple_format h @projet.complements_infos %>
       </div>
-    </div>
-
+  </div>
     <h3>Vous voulez modifier un point avant de quitter ?</h3>
-    <div class="actions">
+  <div class="actions">
       <h3><%= link_to 'Modifier', edit_projet_path(@projet), :class => "bouton" %></h3>
-    </div>
-  <h3>Si tout est ok, vous pouvez dés maintenant qitter ce formulaire, nous vous répondrons au plus vite.</h3>
+  </div>
+  <h3><strong>Après avoir rempli et vérifier votre demande, veuillez s'il vous plaît me prévenir en remplissant le formulaire de contact à cette adresse: <%= link_to 'Contact', "https://tranchesdevie.frama.site/contact", :target => "_blank", :alt => "Contact", :title => "me Contacter" %>.</strong> Si tout est ok, vous pouvez dés maintenant qitter ce formulaire, nous vous répondrons au plus vite.</h3>
   <div class="actions">
     <h3><%= link_to 'Quitter', remerciements_path(@projet), :class => "bouton" %></h3>
   </div>

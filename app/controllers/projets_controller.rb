@@ -31,21 +31,22 @@ class ProjetsController < ApplicationController
 
       else
         format.html { render :new }
+          end
+        end
       end
-    end
-  end
 
 
       def update
         respond_to do |format|
       if @projet.update(projet_params)
         format.html { redirect_to @projet, notice: 'Votre demande a bien été modifiée.' }
-
+        format.json { render :show, status: :ok, location: @projet }
       else
         format.html { render :edit }
+        format.json { render json: @projet.errors, status: :unprocessable_entity }
+          end
+        end
       end
-    end
-  end
 
     def destroy
       @projet.destroy

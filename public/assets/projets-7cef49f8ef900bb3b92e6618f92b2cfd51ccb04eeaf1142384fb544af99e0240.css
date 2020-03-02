@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'fonts';
+  src: url("fonts/Raleway-Light.eot");
+  src: url("fonts/Raleway-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-Light.woff") format("woff"), url("fonts/Raleway-Light.ttf") format("truetype"), url("fonts/Raleway-Light.svg#Raleway-Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 14, app/assets/stylesheets/projets.scss */
+html, body {
+  font-family: 'fonts';
+}
+
+/* line 17, app/assets/stylesheets/projets.scss */
+h1 {
+  color: #3F4850;
+  text-align: center;
+}
+
+/* line 21, app/assets/stylesheets/projets.scss */
+.sous_titre {
+  text-align: center;
+  margin-bottom: 1%;
+  color: #9C298A;
+  font-size: 1.1em;
+}
+
+/* line 27, app/assets/stylesheets/projets.scss */
+.obligatoire {
+  color: red;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* line 32, app/assets/stylesheets/projets.scss */
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #EEECEC;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 2%;
+}
+
+/* line 41, app/assets/stylesheets/projets.scss */
+.personne {
+  margin-bottom: 1%;
+}
+
+/* line 44, app/assets/stylesheets/projets.scss */
+.texte_intro {
+  color: #185E8E;
+  font-size: 1.1em;
+}
+
+/* line 48, app/assets/stylesheets/projets.scss */
+img.logo_simplonve {
+  float: right;
+  width: 40%;
+}
+
+/* line 52, app/assets/stylesheets/projets.scss */
+img.remerciements {
+  display: block;
+  width: 80%;
+}
+
+/* line 56, app/assets/stylesheets/projets.scss */
+.titre_show {
+  display: inline-block;
+}
+
+/* line 59, app/assets/stylesheets/projets.scss */
+.champ_form {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+/* line 63, app/assets/stylesheets/projets.scss */
+.champ_input {
+  width: 40%;
+  height: 2em;
+  border-radius: 5px;
+}
+
+/* line 68, app/assets/stylesheets/projets.scss */
+.description {
+  margin: 10px;
+}
+
+/* line 71, app/assets/stylesheets/projets.scss */
+#projet_description, #projet_carateristiques_hebergement, #projet_fonctionnalites, #projet_langues, #projet_promotion_reseaux_sociaux, #projet_complements_infos {
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+
+/* line 77, app/assets/stylesheets/projets.scss */
+.bouton {
+  width: 15%;
+  height: 2em;
+  background-color: #c16ac6;
+  border-radius: 5px;
+  color: white;
+  margin-top: 10px;
+}
+
+/* line 85, app/assets/stylesheets/projets.scss */
+.bouton2 {
+  height: 2em;
+  background-color: #c16ac6;
+  border-radius: 5px;
+  color: white;
+}
+
+/* line 91, app/assets/stylesheets/projets.scss */
+.boite {
+  width: 40%;
+  height: 20px;
+  padding: 1%;
+  border-radius: 5px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: -1%;
+}
+
+/* line 100, app/assets/stylesheets/projets.scss */
+.boite_description {
+  width: 80%;
+  height: 250px;
+  padding: 1%;
+  overflow: auto;
+  background-color: white;
+  word-wrap: break-word;
+  border-radius: 5px;
+  margin-top: -1%;
+}
+
+/* line 110, app/assets/stylesheets/projets.scss */
+.description_index {
+  width: 80%;
+  word-wrap: break-word;
+}
+
+/* line 114, app/assets/stylesheets/projets.scss */
+.titre {
+  text-align: center;
+  width: 15%;
+}
+
+/* line 118, app/assets/stylesheets/projets.scss */
+.titre_liste {
+  text-align: center;
+}
+
+/* line 121, app/assets/stylesheets/projets.scss */
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 125, app/assets/stylesheets/projets.scss */
+table td {
+  border: #3399CC 1px solid;
+}
+
+/* line 128, app/assets/stylesheets/projets.scss */
+a {
+  width: 15%;
+  height: 2em;
+  text-decoration: none;
+  color: #7d6464;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+/* line 136, app/assets/stylesheets/projets.scss */
+a:hover {
+  color: #9C298A;
+}
+
+/* Medias Querries */
+@media (max-width: 600px) {
+  /* line 143, app/assets/stylesheets/projets.scss */
+  h1 {
+    color: #185E8E;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  /* line 148, app/assets/stylesheets/projets.scss */
+  .container {
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: #EEECEC;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 2%;
+  }
+  /* line 157, app/assets/stylesheets/projets.scss */
+  .champ_input {
+    width: 80%;
+    height: 2em;
+    border: 1px solid #185E8E;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* line 166, app/assets/stylesheets/projets.scss */
+  h1 {
+    color: #185E8E;
+    font-size: 1em;
+    text-align: center;
+  }
+  /* line 171, app/assets/stylesheets/projets.scss */
+  img.logo_simplonve {
+    float: none;
+    width: 40%;
+  }
+  /* line 175, app/assets/stylesheets/projets.scss */
+  select {
+    width: 100%;
+  }
+  /* line 178, app/assets/stylesheets/projets.scss */
+  .bouton {
+    margin-left: 0;
+    width: inherit;
+  }
+}

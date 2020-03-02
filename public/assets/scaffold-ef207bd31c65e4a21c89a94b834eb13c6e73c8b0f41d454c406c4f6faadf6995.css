@@ -1,0 +1,52 @@
+/* line 1, app/assets/stylesheets/scaffold.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 7, app/assets/stylesheets/scaffold.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 12, app/assets/stylesheets/scaffold.scss */
+#notice {
+  font-size: 1.2em;
+  padding: 2px 5px;
+  color: green;
+}
+
+/* line 18, app/assets/stylesheets/scaffold.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+}
+
+/* line 23, app/assets/stylesheets/scaffold.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+/* line 31, app/assets/stylesheets/scaffold.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+/* line 42, app/assets/stylesheets/scaffold.scss */
+#error_explanation ul li {
+  font-size: 1.2em;
+  list-style: square;
+}

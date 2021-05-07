@@ -3,7 +3,7 @@
 
 ## Requirements
 
-* Ruby version 3.0.0
+### Ruby version 3.0.0 (see Gemfile.lock)
 
 You can use rvm or rbenv to have a [Ruby Environment Manager](https://hixonrails.com/ruby-on-rails-tutorials/ruby-environment-management/)
 
@@ -16,7 +16,7 @@ or
 rvm install 3.0.0
 ```
 
-* System dependencies
+### System dependencies
 
 You need node.js and yarn packages
 
@@ -42,10 +42,7 @@ install Rails version
 ```
 $ gem install rails
 ```
-
-(see Gemfile.lock)
-
-* Configuration
+### Configuration
 
 You can clone the project
 
@@ -55,7 +52,7 @@ $ cd demande_projets`
 $ bundle install
 ```
 
-* Database creation and initialization
+### Database creation and initialization
 
 to migrate the database:
 
@@ -63,11 +60,11 @@ to migrate the database:
 $ rails db:create && rails db:migrate
 ```
 
-* Deployment instructions
+### Deployment instructions
 
  on heroku rails use the gem pg with postgresql
 
-* Utilisation:
+### Utilisation:
 
 Pour voir les messages postés dans cette application, il faut se rendre sur le lien https://demande-projets.nom_serveur.tld/projets
 
